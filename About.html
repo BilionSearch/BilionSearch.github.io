@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bilion</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        }
+.header {
+  padding: 30px;
+  background: #AEAEAE;
+  color: white;
+  font-size: 15px;
+}
+      .input-field {
+  height: 20px;
+  width: 320px;
+  padding: 5px;
+  margin: 10px;
+  border: 5px solid #c0c0c0;
+  border-radius: 50px;
+}
+.tab {
+     margin-left: 150px; 
+     margin-right: 150px;
+}
+    a {
+        color: black;
+    }
+    a:hover {
+        color: blue;
+    }
+    #pagewrap {
+  padding: 35px;
+  width: 900px;
+  margin: auto;
+}
+    #pagewrap2 {
+  padding: 45px;
+  width: 900px;
+  margin: auto;
+}
+    .sButton {
+      color: white;
+      height: 40px;
+      width: 70px;
+      background-color: blue;
+      border-radius: 50px;
+
+    }
+    .logo {
+      text-align: right;
+    }
+    .content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 95%;
+}
+
+.sticky + .content {
+  padding-top: 90px;
+}
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+    </style>
+     </head>
+  <body>
+      <div class="header" id="myHeader">
+          <a href="Mail.html" id="pagewrap2" style="font-size: 20px;">Mail</a> 
+          <a href="index.html" id="pagewrap" style="font-size: 20px;">Search</a>          
+          <img align="right" style="width: 10%; height: auto;" src="Logo.png" alt="Logo">
+        </div>
+<div class="content">
+        <center><h1>About Bilion</h1></center>
+        <div id="Start">
+  <center><h3>How Did Bilion Start?</h3></center>
+  <p class="tab">Bilion was started by a 14 year old kid named Derek Haber, because he had an idea to start a new search engine. He worked on it privately on it keeping it offline. This website was began in April, 2019, and was launched 5/7/2019. He also requested a friend to make the logo. The logo went through many stages, from plain silver to the new 3-Dimensional logo we have now. If you have any ideas to make our products more supportive and immersive for our users, make sure to <a href="mailto:pizzaboy04@comcast.net">Contact me</a> and send me your ideas.</p>
+  <br>
+          <p class="tab">Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    </div>
+  <div id="future">
+    <center><h3>Future Plans</h3></center>
+  <p class="tab">Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p class="tab">Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  </div>
+  <div id="updates">
+    <center><h3>Updates</h3></center>
+    <p class="tab">Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p class="tab">Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p class="tab">Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  </div>
+  </div>
+
+        
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+              } else {
+                header.classList.remove("sticky");
+              }
+            }
+            </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Bilion Results</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet"> 
+<link rel='stylesheet' href='s.css'>
+<!-- Latest compiled and minified JavaScript -->
+
+    </head>
+    
+<body ng-app='app' ng-controller='ctrl' ng-init='getSources();getArticles()'>
+       <div class='container-fluid'>
+           <div class='row selectrow'>
+
+           <div class ="form-group">
+            <div class='col-md-4'>
+                <b>category</b>
+  <select class="form-control select"  ng-model='category' ng-change='getSources()'>
+    <option ng-repeat='c in categories' value='{{c}}'>{{c}}</option>
+  </select>
+               </div>    
+           <div class='col-md-4'>
+           <b>sorting type</b>
+  <select class="form-control select"  ng-model='sortingType' ng-change='getArticles()'>
+   <option value='top'>top</option>
+    <option value='latest'>latest</option>
+               <option value='popular'>popular</option>
+           </select>
+               </div>
+               <div class='col-md-4'>
+               <b>column number</b>
+  <select class="form-control select"  ng-model='colSize' ng-init='colSize=4;'>
+    <option value='12'>1</option>
+      <option value='6'>2</option>
+      <option value='4'>3</option>
+      <option value='3'>4</option>
+  </select>
+               </div>  
+               
+           </div>
+       </div>
+    
+        <hr>
+         <div class='row'>
+             <p id='note'>
+                 
+             </p>
+               <div class='col-md-2 col-sm-1 col-xs-3 sourcesImages'  ng-repeat='s in sources'>
+               <img title='{{s.name}}' ng-click='getSelectedSource(s.id)'  src='{{s.urlsToLogos.small}}'>
+               </div>
+           </div> 
+           
+           
+        
+           
+        <hr>
+           
+           
+           
+           <div class='row'>
+               <div class='col-md-{{colSize}} col-sm-6 col-xs-12 contentC'  ng-repeat='item in news.articles'>
+       
+       
+       <div class="card" >
+           
+          <div class="image">
+             
+            <div class="box" style="background-image: url('{{item.urlToImage}}')">
+  </div>
+           
+          </div>
+          <div class="content pull-left">
+              <small>{{item.publishedAt}}</small>
+            <h1>
+       {{item.title}}
+       </h1>
+              <p>
+              {{item.description}}<br><br>
+                  <a class="label label-info" href='{{item.url}}' target="_blank">
+              read more
+            </a>
+                  
+              </p>
+              
+            
+
+            
+          </div>
+          <div class="clearfix">
+
+          </div>
+        </div>
+       
+               </div>
+               
+               
+               
+       </div>
+       </div>
+     
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+       <script src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
+    <script src='js.js'></script>
+    </body>
+    
+</html>

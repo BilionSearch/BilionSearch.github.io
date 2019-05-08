@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Bilion</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+.header {
+  padding: 10px;
+  background: #AEAEAE;
+  color: white;
+  font-size: 15px;
+}
+      .input-field {
+  height: 20px;
+  width: 320px;
+  padding: 5px;
+  margin: 10px;
+  border: 5px solid #c0c0c0;
+  border-radius: 50px;
+}
+    a {
+        color: black;
+    }
+    a:hover {
+        color: blue;
+    }
+    #pagewrap {
+  padding: 35px;
+  width: 900px;
+  margin: auto;
+}
+    #pagewrap2 {
+  padding: 45px;
+  width: 900px;
+  margin: auto;
+}
+    .sButton {
+      color: white;
+      height: 40px;
+      width: 70px;
+      background-color: blue;
+      border-radius: 50px;
+
+    }
+
+</style>
+</head>
+<body>
+<main>
+<div class="header">
+<a href="About.html" id="pagewrap2" style="font-size: 20px;">About</a> 
+<a href="Mail.html" id="pagewrap" style="font-size: 20px;">Mail</a>
+</div>
+<br>
+<br>
+<br>
+<center><img style="width: 35%; height: auto;" src="Logo.png" alt="Logo"></center>
+
+<form>
+  <div>
+      <i class="material-icons prefix">public</i>
+      <input class="input-field" type="text" width="50%" id="searchquery" placeholder="Search...">
+  </div>
+  
+  <div class="row">
+     <input type="submit" id="searchbtn" class="btn col m2 s12" value="search">
+     <input type="reset" id="searchbtn" class="btn col m2 s12 red right" value="clear"  style="margin-top:3px;">
+  </div>
+  
+</form>
+
+<div id="loader" style="display:none;">
+<div class="progress">
+  <div class="indeterminate"></div>
+</div>
+</div>
+
+<div class="row">
+ <div id="newsResults"></div>
+</div>
+
+
+
+
+
+</div>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="iconChanger.js"></script>
+<script src="newsapi.js"></script>
+</main>
+<br>
+<div class="header">
+<footer>&copy; Bilion search</footer>
+</div>
+</body>
+</html>
