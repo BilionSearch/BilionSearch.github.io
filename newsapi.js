@@ -6,7 +6,7 @@ $(document).ready(function(){
       e.preventDefault();
       
       let query = $("#searchquery").val();
-      let url = "https://newsapi.org/v2/top-headlines?q="+query+"&country=us&category=business&apiKey=0b2e695773fa4094bfc0032461061b3f";
+      let url = "https://newsapi.org/v2/top-headlines?q="+query+"&country=us&category=business&apiKey=5a24f7df5fc040399492da0d5a406704";
       
       if(query !== ""){
         
